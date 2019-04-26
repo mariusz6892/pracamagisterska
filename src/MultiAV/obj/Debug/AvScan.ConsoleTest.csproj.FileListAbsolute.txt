@@ -1,0 +1,7 @@
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\bin\Debug\AvScan.ConsoleTest.exe.config
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\bin\Debug\AvScan.ConsoleTest.exe
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\bin\Debug\AvScan.ConsoleTest.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\obj\Debug\AvScan.ConsoleTest.csprojAssemblyReference.cache
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\obj\Debug\AvScan.ConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\obj\Debug\AvScan.ConsoleTest.exe
+C:\Users\MarWin\Desktop\Praca magisterska\AvScan-master\src\AvScan.ConsoleTest\obj\Debug\AvScan.ConsoleTest.pdb

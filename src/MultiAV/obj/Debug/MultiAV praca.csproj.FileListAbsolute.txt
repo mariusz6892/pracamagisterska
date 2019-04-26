@@ -1,0 +1,37 @@
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\obj\Debug\MultiAV praca.csprojAssemblyReference.cache
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\obj\Debug\MultiAV praca.csproj.CoreCompileInputs.cache
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\bin\Debug\MultiAV praca.exe.config
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\bin\Debug\MultiAV praca.exe
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\bin\Debug\MultiAV praca.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\obj\Debug\MultiAV praca.exe
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\AvScan.ConsoleTest\obj\Debug\MultiAV praca.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\MultiAV praca.exe.config
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\MultiAV praca.exe
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\MultiAV praca.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\ConfigParser.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\obj\Debug\MultiAV praca.csprojAssemblyReference.cache
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\obj\Debug\MultiAV praca.csproj.CoreCompileInputs.cache
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\obj\Debug\MultiAV praca.csproj.CopyComplete
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\obj\Debug\MultiAV praca.exe
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\obj\Debug\MultiAV praca.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\config.cfg
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Management.Automation.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\PeNet.Asn1.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\PeNet.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\libgnurx-0.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\libmagic-1.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\magic.mgc
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\Mime.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\MimeTypesMap.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Net.Http.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\PEReader.dll
+C:\Users\MarWin\Desktop\Praca magisterska\praca c#\src\MultiAV\bin\Debug\Mime-Detective.dll

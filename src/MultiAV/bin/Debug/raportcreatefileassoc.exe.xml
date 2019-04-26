@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Nazwa_pliku="createfileassoc.exe" Wielkosc_pliku="194080" Sha256="61D43F543BB4D6199E10BC9650808A57051645E346A98BEF06A0DB0192139849">
+  <Antywirusy>
+    <Antywirus Nazwa_AV="Windows Defender" Result="NoThreatFound" />
+    <Antywirus Nazwa_AV="Windows Defender2" Result="NoThreatFound" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="6621d4170f328b348fef551406030600" SHA1="31164a06a9ffd60920e51114f173e5bd21d8e503" Authentihash="52E068B5D6B3D7C68E5C0060C090C611443F7711F76C911DB79D0F7C91DC3D42" Imphash="5e27740d9754d3decf77cb65d4f31c5f" FileSize="194080" FileType="application/x-dosexec" />
+  <FileVersionInfo>
+    <Podpis_Cyfrowy IsSigned="True" IsValid="True" ValidFrom="13.10.2017 02:00:00" ValidTo="26.11.2020 00:59:59" Algorithm="sha256RSA" Issuer="thawte SHA256 Code Signing CA" Thumbprint="666594C567B832B545AF02B532C35E0AF7D55950" SerialNumber="4D11D580AB75EDF1C6253EF239B514DC" />
+    <File_Ver_Info FileBuildPart="0" />
+  </FileVersionInfo>
+  <PE_Header TargetMachine="Intel 386" CompilationTimestamp="09.12.2015 04:51:00" EntryPoint="12510" ContainedSections="5" />
+  <PE_Sections>
+    <text VirtualAddress="4096" VirtualSize="23191" RawSize="23552" Entropy="6,41" MD5="32DC851F86DA35153D36C84DE5AD9034" />
+    <rdata VirtualAddress="28672" VirtualSize="4446" RawSize="4608" Entropy="5,14" MD5="632109526A6B72B0C3BE4F5A4D264328" />
+    <data VirtualAddress="36864" VirtualSize="110648" RawSize="1536" Entropy="4,04" MD5="28825C5E17A81E314D6140BEB34F88F3" />
+    <ndata VirtualAddress="151552" VirtualSize="36864" RawSize="0" Entropy="0" MD5="D41D8CD98F00B204E9800998ECF8427E" />
+    <rsrc VirtualAddress="188416" VirtualSize="149808" RawSize="150016" Entropy="6,5" MD5="B2DFDB2C23AFF9B8E0E24A862E558040" />
+  </PE_Sections>
+  <PE_Imports>
+    <KERNEL32.dll>
+      <SetFileAttributesA />
+      <GetShortPathNameA />
+      <GetFullPathNameA />
+      <MoveFileA />
+      <SetCurrentDirectoryA />
+      <GetFileAttributesA />
+      <GetLastError />
+      <CompareFileTime />
+      <SearchPathA />
+      <Sleep />
+      <GetTickCount />
+      <GetFileSize />
+      <GetModuleFileNameA />
+      <GetCurrentProcess />
+      <CopyFileA />
+      <ExitProcess />
+      <CreateDirectoryA />
+      <lstrcmpiA />
+      <GetCommandLineA />
+      <SetErrorMode />
+      <lstrcpynA />
+      <GetDiskFreeSpaceA />
+      <GlobalUnlock />
+      <GlobalLock />
+      <CreateThread />
+      <CreateProcessA />
+      <RemoveDirectoryA />
+      <CreateFileA />
+      <GetTempFileNameA />
+      <lstrlenA />
+      <lstrcatA />
+      <GetSystemDirectoryA />
+      <GetVersion />
+      <LoadLibraryA />
+      <SetFileTime />
+      <CloseHandle />
+      <GlobalFree />
+      <lstrcmpA />
+      <ExpandEnvironmentStringsA />
+      <GetExitCodeProcess />
+      <GlobalAlloc />
+      <WaitForSingleObject />
+      <GetWindowsDirectoryA />
+      <GetTempPathA />
+      <GetProcAddress />
+      <FindFirstFileA />
+      <FindNextFileA />
+      <DeleteFileA />
+      <SetFilePointer />
+      <ReadFile />
+      <FindClose />
+      <GetPrivateProfileStringA />
+      <WritePrivateProfileStringA />
+      <WriteFile />
+      <MulDiv />
+      <LoadLibraryExA />
+      <GetModuleHandleA />
+      <MultiByteToWideChar />
+      <FreeLibrary />
+    </KERNEL32.dll>
+    <USER32.dll>
+      <GetWindowRect />
+      <EnableMenuItem />
+      <GetSystemMenu />
+      <ScreenToClient />
+      <SetClassLongA />
+      <IsWindowEnabled />
+      <SetWindowPos />
+      <GetSysColor />
+      <GetWindowLongA />
+      <SetCursor />
+      <LoadCursorA />
+      <CheckDlgButton />
+      <GetMessagePos />
+      <LoadBitmapA />
+      <CallWindowProcA />
+      <IsWindowVisible />
+      <CloseClipboard />
+      <SetForegroundWindow />
+      <PostQuitMessage />
+      <RegisterClassA />
+      <EndDialog />
+      <AppendMenuA />
+      <CreatePopupMenu />
+      <GetSystemMetrics />
+      <SetDlgItemTextA />
+      <GetDlgItemTextA />
+      <MessageBoxIndirectA />
+      <CharPrevA />
+      <DispatchMessageA />
+      <PeekMessageA />
+      <EnableWindow />
+      <InvalidateRect />
+      <SendMessageA />
+      <DefWindowProcA />
+      <BeginPaint />
+      <GetClientRect />
+      <FillRect />
+      <DrawTextA />
+      <EndPaint />
+      <SystemParametersInfoA />
+      <CreateWindowExA />
+      <GetClassInfoA />
+      <DialogBoxParamA />
+      <CharNextA />
+      <ExitWindowsEx />
+      <DestroyWindow />
+      <OpenClipboard />
+      <TrackPopupMenu />
+      <SendMessageTimeoutA />
+      <GetDC />
+      <LoadImageA />
+      <GetDlgItem />
+      <FindWindowExA />
+      <IsWindow />
+      <SetClipboardData />
+      <SetWindowLongA />
+      <EmptyClipboard />
+      <SetTimer />
+      <CreateDialogParamA />
+      <wsprintfA />
+      <ShowWindow />
+      <SetWindowTextA />
+    </USER32.dll>
+    <GDI32.dll>
+      <SelectObject />
+      <SetBkMode />
+      <CreateFontIndirectA />
+      <SetTextColor />
+      <DeleteObject />
+      <GetDeviceCaps />
+      <CreateBrushIndirect />
+      <SetBkColor />
+    </GDI32.dll>
+    <SHELL32.dll>
+      <SHGetSpecialFolderLocation />
+      <SHGetPathFromIDListA />
+      <SHBrowseForFolderA />
+      <SHGetFileInfoA />
+      <ShellExecuteA />
+      <SHFileOperationA />
+    </SHELL32.dll>
+    <ADVAPI32.dll>
+      <RegDeleteValueA />
+      <SetFileSecurityA />
+      <RegOpenKeyExA />
+      <RegDeleteKeyA />
+      <RegEnumValueA />
+      <RegCloseKey />
+      <RegCreateKeyExA />
+      <RegSetValueExA />
+      <RegQueryValueExA />
+      <RegEnumKeyA />
+    </ADVAPI32.dll>
+    <COMCTL32.dll>
+      <ImageList_Create />
+      <ImageList_Destroy />
+    </COMCTL32.dll>
+  </PE_Imports>
+  <Number_of_PE_resources_by_type>
+    <RT_ICON Number="6" />
+    <RT_DIALOG Number="3" />
+    <RT_GROUP_CURSOR4 Number="1" />
+    <RT_MANIFEST Number="1" />
+  </Number_of_PE_resources_by_type>
+  <Number_of_PE_resources_by_language>
+    <en-US Number="11" />
+  </Number_of_PE_resources_by_language>
+  <PE_resources>
+    <RT_ICON Language="en-US" Sha256="94E5762F8ECB39B1AD6D62F0163E959DAE616A6373A073A701BF6B4F2B8B79BD" />
+    <RT_ICON Language="en-US" Sha256="D7868C49C3E8FF2B41130201446008A7572A2A6222DB057BB89E5F2C2194C724" />
+    <RT_ICON Language="en-US" Sha256="5B1B7A1A2F8CA791D14378D71A62CCC3B082774916741881D4C5D19693EFCA09" />
+    <RT_ICON Language="en-US" Sha256="6665A16C9BCAF34F9CC94A79A25B1F0D5C919D705EB99A6B709292B0698CC3D8" />
+    <RT_ICON Language="en-US" Sha256="23C32FE93F7E7C8739683122A3CAFDFE219C3EA2F55FCA0AE6EBAE88FB2C07BC" />
+    <RT_ICON Language="en-US" Sha256="8F6B1AC7DFAE57B395D1C1AD46369E570D185426670176F0D0181BF6262DFC78" />
+    <RT_DIALOG Language="en-US" Sha256="FECDB955F8D7F1C219FF8167F90B64F3CB52E53337494577FF73C0AC1DAFCD96" />
+    <RT_DIALOG Language="en-US" Sha256="69897C784F1491EB3024B0D52C2897196A2E245974497FDA1915DB5FEFCF8729" />
+    <RT_DIALOG Language="en-US" Sha256="85025C8556952F6A651C2468C8A0D58853B0BA482BE9AD5CD3060F216540DFC0" />
+    <RT_GROUP_CURSOR4 Language="en-US" Sha256="2CE7C11DC995EEC2EADFC307433D0B6D9A052375DD564F2650B94DB850174396" />
+    <RT_MANIFEST Language="en-US" Sha256="3B70C43F087CE04F353AF423DFF6BD866DBF5B3123D2F38334A19CD1BAC568D1" />
+  </PE_resources>
+  <ExifTool_file_metadata />
+</Raport>

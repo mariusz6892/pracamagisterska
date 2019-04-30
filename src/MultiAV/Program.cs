@@ -39,12 +39,12 @@ class Program
         //var fileToScan = @"C:\Users\MarWin\Desktop\Cities.Skylines.Industries.Update.v1.11.1-f2\Update\Setup.exe";
         //var fileToScan = @"C:\Users\MarWin\Downloads\ProtonVPN_win_v1.7.4.exe";
         //var fileToScan = @"C:\Users\MarWin\Downloads\MicrosoftSpeechPlatformSDK.msi";
-        var fileToScan = @"C:\Users\MarWin\Downloads\TIPS 3.31 wytyczne 2018-2019.doc";
+        //var fileToScan = @"C:\Users\MarWin\Downloads\TIPS 3.31 wytyczne 2018-2019.doc";
         //var fileToScan = @"C:\Users\MarWin\Downloads\Hdk-i-nagrodowy.docx";
         //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\PEReader.dll";
         //var fileToScan = @"D:\TS\createfileassoc.exe";
         //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\eicardropper.pdf";
-        //var fileToScan = @"C:\Users\MarWin\Pictures\10a.jpg";
+        var fileToScan = @"C:\Users\MarWin\Pictures\10a.jpg";
 
         if (!File.Exists(fileToScan))
         {

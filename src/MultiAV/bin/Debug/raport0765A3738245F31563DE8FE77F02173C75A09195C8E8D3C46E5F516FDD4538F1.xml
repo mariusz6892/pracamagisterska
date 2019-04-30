@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Wielkosc_pliku="44882" Sha256="0765A3738245F31563DE8FE77F02173C75A09195C8E8D3C46E5F516FDD4538F1" Date="30.04.2019 10:13:12" Nazwa_pliku="10a.jpg">
+  <Antywirusy>
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="3F93085326DBCA17F5C6EB848A98405B" SHA1="EA5A012806AE7AF72C7EABC017AC194DCF96CB33" Authentihash="0765A3738245F31563DE8FE77F02173C75A09195C8E8D3C46E5F516FDD4538F1" FileType="image/jpeg" />
+  <FileVersionInfo />
+  <PE_Header />
+  <PE_Sections />
+  <PE_Imports />
+  <Number_of_PE_resources_by_type />
+  <Number_of_PE_resources_by_language />
+  <PE_resources />
+  <ExifTool_file_metadata FileType="JPEG" FileTypeExtension="jpg" MIMEType="image/jpeg" JFIFVersion="1.01" ResolutionUnit="inches" XResolution="72" YResolution="72" ImageWidth="445" ImageHeight="629" EncodingProcess="Progressive DCT, Huffman coding" BitsPerSample="8" ColorComponents="3" YCbCrSubSampling="YCbCr4:2:0 (2 2)" ImageSize="445x629" Megapixels="0.280" />
+</Raport>

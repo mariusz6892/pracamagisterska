@@ -18,9 +18,6 @@ public class PEResources
 
     public PEResources(string FiletoScan, ref XMLParser raport)
     {
-        try
-        {
-
             //var peHeader = new PeNet.PeFile(FiletoScan);
             using (PEFile info = new PEFile(StreamLoader.FromFile(FiletoScan)))
             {
@@ -63,13 +60,6 @@ public class PEResources
                         orderby pair.Value descending
                         select pair;
             raport.AddPEResourcesbyLanguage(items2);
-
-        }
-
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-        }
     }
 
     private void ListResourcesbyType(string type)

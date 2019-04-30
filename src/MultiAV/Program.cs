@@ -10,9 +10,16 @@ using System.Globalization;
 using System.Reflection;
 using System.Xml.Linq;
 using System.Security.Cryptography;
+using System.Runtime.InteropServices;
 
 class Program
 {
+
+    [DllImport("ole32.dll")]
+    static extern int StgIsStorageFile(
+  [MarshalAs(UnmanagedType.LPWStr)]
+    string pwcsName);
+
     public static string SHA256CheckSum(string filePath)
     {
         using (SHA256 SHA256 = SHA256.Create())
@@ -30,8 +37,14 @@ class Program
 
         //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\eicar.com";
         //var fileToScan = @"C:\Users\MarWin\Desktop\Cities.Skylines.Industries.Update.v1.11.1-f2\Update\Setup.exe";
-        var fileToScan = @"C:\Users\MarWin\Downloads\ProtonVPN_win_v1.7.4.exe";
+        //var fileToScan = @"C:\Users\MarWin\Downloads\ProtonVPN_win_v1.7.4.exe";
+        //var fileToScan = @"C:\Users\MarWin\Downloads\MicrosoftSpeechPlatformSDK.msi";
+        var fileToScan = @"C:\Users\MarWin\Downloads\TIPS 3.31 wytyczne 2018-2019.doc";
+        //var fileToScan = @"C:\Users\MarWin\Downloads\Hdk-i-nagrodowy.docx";
+        //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\PEReader.dll";
         //var fileToScan = @"D:\TS\createfileassoc.exe";
+        //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\eicardropper.pdf";
+        //var fileToScan = @"C:\Users\MarWin\Pictures\10a.jpg";
 
         if (!File.Exists(fileToScan))
         {
@@ -58,18 +71,30 @@ class Program
         BasicProperties basic = new BasicProperties(fileToScan, ref raport);
         //FileVersionInfo
         FileversionInfo fileversioninfo = new FileversionInfo(fileToScan, ref raport);
-        //PEHeader
-        PEHeader peheader = new PEHeader(fileToScan, ref raport);
-        if (peheader.moreheader)
+
+        if (StgIsStorageFile(fileToScan) == 0) // jezeli jest OLE
         {
-            //PESections
-            PESections pesections = new PESections(fileToScan, ref raport);
-            PEImports peimports = new PEImports(fileToScan, ref raport);
-            PEResources peresources = new PEResources(fileToScan, ref raport);
+            OLECompoundFileInfo ole = new OLECompoundFileInfo(fileToScan, ref raport);
         }
-        
+        else
+        {
+            try
+            {
+                //PEHeader
+                PEHeader peheader = new PEHeader(fileToScan, ref raport);
+                PESections pesections = new PESections(fileToScan, ref raport);
+                PEImports peimports = new PEImports(fileToScan, ref raport);
+                PEResources peresources = new PEResources(fileToScan, ref raport);
+            }
+            catch (ArgumentException) //jeżeli nie jest valid PE, ponieważ może nie być OLE i nie być PE 
+            {
+            }
+        }
+        //EXIF
+        //Wykorzystanie programu EXIFTOOLS do wybrania metadanych
+        ExIF exif = new ExIF(fileToScan, ref raport);
         //wypisanie XDocument
-        raport.WritetoFile("raport"+ filenameWithoutPath + ".xml");
+        raport.WritetoFile("raport"+ sha256 + ".xml");
         Console.WriteLine($"Completed scan in {sw.ElapsedMilliseconds}ms");
         Console.WriteLine("Press any key to exit.");
         Console.ReadKey();

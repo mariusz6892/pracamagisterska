@@ -22,7 +22,7 @@ public class FileversionInfo
             if (peHeader.IsSigned)
             {
                 raport.AddFileVersionSigned(filever.Comments != null ? filever.Comments.ToString() : "", filever.CompanyName != null ? filever.CompanyName.ToString() : ""
-                                            , filever.FileBuildPart.ToString() != null ? filever.FileBuildPart.ToString() : "", filever.FileDescription != null ? filever.FileDescription.ToString() : "",
+                                            , filever.FileBuildPart.ToString() ?? "", filever.FileDescription != null ? filever.FileDescription.ToString() : "",
                                             filever.FileVersion != null ? filever.FileVersion.ToString() : "", filever.InternalName != null ? filever.InternalName.ToString() : ""
                                             , filever.Language != null ? filever.Language.ToString() : "", filever.SpecialBuild != null ? filever.SpecialBuild.ToString() : "");
 
@@ -39,7 +39,7 @@ public class FileversionInfo
             else
             {
                 raport.AddFileVersionNotSigned(filever.Comments != null ? filever.Comments.ToString() : "", filever.CompanyName != null ? filever.CompanyName.ToString() : ""
-                                            , filever.FileBuildPart.ToString() != null ? filever.FileBuildPart.ToString() : "", filever.FileDescription != null ? filever.FileDescription.ToString() : "",
+                                            , filever.FileBuildPart.ToString() ?? "", filever.FileDescription != null ? filever.FileDescription.ToString() : "",
                                             filever.FileVersion != null ? filever.FileVersion.ToString() : "", filever.InternalName != null ? filever.InternalName.ToString() : ""
                                             , filever.Language != null ? filever.Language.ToString() : "", filever.SpecialBuild != null ? filever.SpecialBuild.ToString() : "");
             }

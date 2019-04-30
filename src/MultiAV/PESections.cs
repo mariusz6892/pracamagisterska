@@ -12,8 +12,6 @@ public class PESections
     private readonly double log2 = 1.44269504088896340736;
     public PESections(string FiletoScan, ref XMLParser raport)
     {
-        try
-        {
             var peHeader = new PeNet.PeFile(FiletoScan);
             for (int i = 0; i <= peHeader.ImageSectionHeaders.Length - 1 ; i++)
             {
@@ -33,11 +31,6 @@ public class PESections
                 }
             }
             
-        }
-        catch (Exception)
-        {
-
-        }
     }
 
     private double CountEntropy(uint[] byte_count, uint sizeOfRawData)

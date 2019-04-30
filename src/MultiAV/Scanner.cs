@@ -14,6 +14,7 @@ public class Scanner
     private string regex;
     private string nazwa;
     private XMLParser raport;
+    private string version;
 
     /// <summary>
     /// Creates a new scanner
@@ -26,6 +27,7 @@ public class Scanner
             throw new FileNotFoundException();
         }
         this.runLocation = new FileInfo(runLocation).FullName;
+        version = FileVersionInfo.GetVersionInfo(runLocation).FileVersion;
         this.arguments = arguments ?? throw new ArgumentNullException("Arguments in config file cannot be null!");
         this.regex = regex ?? throw new ArgumentNullException("Regex in config file cannot be null!");
         this.nazwa = nazwa;
@@ -43,7 +45,7 @@ public class Scanner
     {
         if (!File.Exists(file))
         {
-            raport.AddAntywirusyNoFound(nazwa, "FileNotFound");
+            raport.AddAntywirusyNoFound(nazwa, version, "FileNotFound");
             return "FileNotFound";
         }
 
@@ -68,7 +70,7 @@ public class Scanner
         if (!process.HasExited)
         {
             process.Kill();
-            raport.AddAntywirusyNoFound(nazwa, "Timeout");
+            raport.AddAntywirusyNoFound(nazwa, version, "Timeout");
             return "Timeout";
         }
         string output = process.StandardOutput.ReadToEnd();
@@ -76,12 +78,12 @@ public class Scanner
         {
             string pest_name = Regex.Match(output, regex, RegexOptions.IgnoreCase).Groups[1].Value;
             pest_name = Regex.Replace(pest_name, @"\r\n?|\n", "");
-            raport.AddAntywirusyFound(nazwa, "ThreatFound", pest_name);
+            raport.AddAntywirusyFound(nazwa, version,"ThreatFound", pest_name);
             return "ThreatFound";
         }
         else
         {
-            raport.AddAntywirusyNoFound(nazwa, "NoThreatFound");
+            raport.AddAntywirusyNoFound(nazwa, version, "NoThreatFound");
             return "NoThreatFound";
         }
     }

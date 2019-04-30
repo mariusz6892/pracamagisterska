@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Wielkosc_pliku="9113600" Sha256="342AC57252953A239ACCCA44555A77071A457E0C929B84CEFA3DE3203885AC93" Date="29.04.2019 19:58:25" Nazwa_pliku="MicrosoftSpeechPlatformSDK.msi">
+  <Antywirusy>
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="e4afdd0530b3c291b7af337dde41e287" SHA1="99b44af15dc93b13765161a001c4f4694a5821ae" Authentihash="342AC57252953A239ACCCA44555A77071A457E0C929B84CEFA3DE3203885AC93" Imphash="" FileSize="9113600" FileType="application/x-msi" />
+  <FileVersionInfo>
+    <Podpis_Cyfrowy IsSigned="False" />
+    <File_Ver_Info FileBuildPart="0" />
+  </FileVersionInfo>
+  <PE_Header />
+  <PE_Sections />
+  <PE_Imports />
+  <Number_of_PE_resources_by_type />
+  <Number_of_PE_resources_by_language />
+  <PE_resources />
+  <ExifTool_file_metadata FileType="FPX" FileTypeExtension="fpx" MIMEType="image/vnd.fpx" CodePage="Windows Latin 1 (Western European)" Title="Installation Database" Subject="Microsoft Speech Platform SDK (x64) v11.0" Author="Microsoft Corporation" Keywords="Microsoft Speech Platform SDK (x64) v11.0" Comments="Microsoft Speech Platform SDK (x64) v11.0" Template="x64;1033" RevisionNumber="{36F56341-4AD0-4A02-B9DA-7E6C8E3DED73}" CreateDate="2011.12.06 08:13:04" ModifyDate="2011.12.06 08:13:04" Pages="200" Words="2" Software="Windows Installer XML (3.6.1623.0)" Security="Read-only recommended" />
+  <OLECompoundFileInfo>
+    <SummaryInformation CodePage="1252" Title="Installation Database" Subject="Microsoft Speech Platform SDK (x64) v11.0" Author="Microsoft Corporation" Keywords="Microsoft Speech Platform SDK (x64) v11.0" Comments="Microsoft Speech Platform SDK (x64) v11.0" Template="x64;1033" RevisionNumber="{36F56341-4AD0-4A02-B9DA-7E6C8E3DED73}" CreateTimeDate="06.12.2011 09:13:04" LastSavedTimeDate="06.12.2011 09:13:04" Pages="200" Words="2" ApplicationName="Windows Installer XML (3.6.1623.0)" Security="2" />
+  </OLECompoundFileInfo>
+</Raport>

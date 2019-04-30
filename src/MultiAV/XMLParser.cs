@@ -31,6 +31,8 @@ public class XMLParser
     private XmlNode peresourcesNode;
     private XmlNode exiftoolNode;
     private XmlNode basicPropertiesNode;
+    private XmlNode oleNode;
+    private XmlNode summaryoleNode;
 
 
     public XMLParser(string filename, long size, string sha256)
@@ -40,15 +42,18 @@ public class XMLParser
         _doc.AppendChild(docNode);
         raportNode = _doc.CreateElement("Raport");
         _doc.AppendChild(raportNode);
-        XmlAttribute FileName = _doc.CreateAttribute("Nazwa_pliku");
-        raportNode.Attributes.Append(FileName);
-        FileName.Value = filename;
         XmlAttribute Size = _doc.CreateAttribute("Wielkosc_pliku");
         raportNode.Attributes.Append(Size);
         Size.Value = size.ToString();
         XmlAttribute Sha256 = _doc.CreateAttribute("Sha256");
         raportNode.Attributes.Append(Sha256);
         Sha256.Value = sha256;
+        XmlAttribute Data = _doc.CreateAttribute("Date");
+        raportNode.Attributes.Append(Data);
+        Data.Value = DateTime.Now.ToString();
+        XmlAttribute FileName = _doc.CreateAttribute("Nazwa_pliku");
+        raportNode.Attributes.Append(FileName);
+        FileName.Value = filename;
         avsNode = _doc.CreateElement("Antywirusy");
         raportNode.AppendChild(avsNode);
 
@@ -76,6 +81,7 @@ public class XMLParser
         peresourcesNode = _doc.CreateElement("PE_resources");
         raportNode.AppendChild(peresourcesNode);
 
+
         exiftoolNode = _doc.CreateElement("ExifTool_file_metadata");
         raportNode.AppendChild(exiftoolNode);
 
@@ -83,7 +89,7 @@ public class XMLParser
     }
 
     #region Antywirus methods
-    public void AddAntywirusyFound(string AVname, string result, string pestname)
+    public void AddAntywirusyFound(string AVname, string AVversion, string result, string pestname)
     {
         XmlNode AVNode = _doc.CreateElement("Antywirus");
         avsNode.AppendChild(AVNode);
@@ -91,24 +97,32 @@ public class XMLParser
         XmlAttribute NazwaAV = _doc.CreateAttribute("Nazwa_AV");
         XmlAttribute Result = _doc.CreateAttribute("Result");
         XmlAttribute PestName = _doc.CreateAttribute("Nazwa_szkodnika");
+        XmlAttribute VersionAV = _doc.CreateAttribute("AVVersion");
+        VersionAV.Value = AVversion;
         NazwaAV.Value = AVname;
         Result.Value = result;
         PestName.Value = pestname;
-        AVNode.Attributes.Append(NazwaAV);
-        AVNode.Attributes.Append(Result);
         AVNode.Attributes.Append(PestName);
+        AVNode.Attributes.Append(Result);
+        AVNode.Attributes.Append(VersionAV);
+        AVNode.Attributes.Append(NazwaAV);
     }
-    public void AddAntywirusyNoFound(string AVname, string result)
+    public void AddAntywirusyNoFound(string AVname, string AVversion, string result)
     {
         XmlNode AVNode = _doc.CreateElement("Antywirus");
         avsNode.AppendChild(AVNode);
         //avNode Attributes
         XmlAttribute NazwaAV = _doc.CreateAttribute("Nazwa_AV");
         XmlAttribute Result = _doc.CreateAttribute("Result");
+        XmlAttribute VersionAV = _doc.CreateAttribute("AVVersion");
+        VersionAV.Value = AVversion;
         NazwaAV.Value = AVname;
         Result.Value = result;
-        AVNode.Attributes.Append(NazwaAV);
         AVNode.Attributes.Append(Result);
+        AVNode.Attributes.Append(VersionAV);
+        AVNode.Attributes.Append(NazwaAV);
+        
+       
     }
     #endregion
 
@@ -183,17 +197,15 @@ public class XMLParser
         DSNode = _doc.CreateElement("Podpis_Cyfrowy");
         fileversioninfoNode.AppendChild(DSNode);
         //avNode Attributes
+        
+        AddFver(Comments, CompanyName, FileBuildPart, FileDescription, FileVersion, InternalName, Language, SpecialBuild);
         XmlAttribute isSigned = _doc.CreateAttribute("IsSigned");
         isSigned.Value = "True";
         DSNode.Attributes.Append(isSigned);
-
-        AddFver(Comments, CompanyName, FileBuildPart, FileDescription, FileVersion, InternalName, Language, SpecialBuild);
     }
     public void AddFileVersionSignedValid(System.Security.Cryptography.X509Certificates.X509Certificate2 pKCS7)
     {
-        XmlAttribute isvalid = _doc.CreateAttribute("IsValid");
-        isvalid.Value = "True";
-        DSNode.Attributes.Append(isvalid);
+        
         XmlAttribute ValidFrom = _doc.CreateAttribute("ValidFrom");
         ValidFrom.Value = pKCS7.NotBefore.ToString();
         DSNode.Attributes.Append(ValidFrom);
@@ -212,6 +224,9 @@ public class XMLParser
         XmlAttribute serialnb = _doc.CreateAttribute("SerialNumber");
         serialnb.Value = pKCS7.SerialNumber;
         DSNode.Attributes.Append(serialnb);
+        XmlAttribute isvalid = _doc.CreateAttribute("IsValid");
+        isvalid.Value = "True";
+        DSNode.Attributes.Append(isvalid);
     }
     public void AddFileVersionSignedInvalid()
     {
@@ -483,6 +498,101 @@ public class XMLParser
         }
     }
 
+    #endregion
+
+    #region OLE
+    public void InitializeOle()
+    {
+        oleNode = _doc.CreateElement("OLECompoundFileInfo");
+        raportNode.AppendChild(oleNode);
+        summaryoleNode = _doc.CreateElement("SummaryInformation");
+        oleNode.AppendChild(summaryoleNode);
+    }
+
+    public void AddSummInfoAtt(uint PropertyIdentifier, string PropertyValue)
+    {
+        string PropertyName;
+        PropertyValue = PropertyValue.Replace("\0", String.Empty);
+        switch (PropertyIdentifier){
+            case 1:
+                PropertyName = "CodePage";
+                break;
+            case 2:
+                PropertyName = "Title";
+                break;
+            case 3:
+                PropertyName = "Subject";
+                break;
+            case 4:
+                PropertyName = "Author";
+                break;
+            case 5:
+                PropertyName = "Keywords";
+                break;
+            case 6:
+                PropertyName = "Comments";
+                break;
+            case 7:
+                PropertyName = "Template";
+                break;
+            case 8:
+                PropertyName = "LastSavedBy";
+                break;
+            case 9:
+                PropertyName = "RevisionNumber";
+                break;
+            case 10:
+                PropertyName = "TotalEditingTime";
+                PropertyValue = Convert.ToDateTime(PropertyValue).ToUniversalTime().Subtract(new DateTime(1601,01,01)).ToString();
+                break;
+            case 11:
+                PropertyName = "LastPrinted";
+                break;
+            case 12:
+                PropertyName = "CreateTimeDate";
+                break;
+            case 13:
+                PropertyName = "LastSavedTimeDate";
+                break;
+            case 14:
+                PropertyName = "Pages";
+                break;
+            case 15:
+                PropertyName = "Words";
+                break;
+            case 16:
+                PropertyName = "Characters";
+                break;
+            case 17:
+                PropertyName = "Thumbnail";
+                break;
+            case 18:
+                PropertyName = "ApplicationName";
+                break;
+            case 19:
+                PropertyName = "Security";
+                break;
+            default:
+                PropertyName = "Unknown";
+                break;
+        }
+        XmlAttribute AttName = _doc.CreateAttribute(PropertyName);
+        AttName.Value = PropertyValue;
+        summaryoleNode.Attributes.Append(AttName);
+    }
+
+    #endregion
+
+    #region EXIF methods
+    public void AddExIF(Dictionary<string, string> exif)
+    {
+        foreach (KeyValuePair<string, string> kvp in exif)
+        {
+            XmlAttribute exifatt = _doc.CreateAttribute(kvp.Key.Replace(" ", string.Empty).Replace("/", string.Empty));
+            exifatt.Value = kvp.Value;
+            exiftoolNode.Attributes.Append(exifatt);
+        }
+    }
     #endregion
 
     public void WritetoConsole()

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Wielkosc_pliku="186841" Sha256="758619E0836A594C9B1E406D320A31EBE9A178D11FB34E826D2D543163179865" Date="03.05.2019 02:06:54" Nazwa_pliku="sample08.pdf">
+  <Antywirusy>
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="1D25E837D3F632677D20AB6A0A09FC50" SHA1="04A4C79683385CA27FD462CB0019CC5036599DD3" Authentihash="758619E0836A594C9B1E406D320A31EBE9A178D11FB34E826D2D543163179865" FileType="application/pdf" />
+  <FileVersionInfo>
+    <Podpis_Cyfrowy IsSigned="False" />
+    <File_Ver_Info FileBuildPart="0" />
+  </FileVersionInfo>
+  <PE_Header />
+  <PE_Sections />
+  <PE_Imports />
+  <Number_of_PE_resources_by_type />
+  <Number_of_PE_resources_by_language />
+  <PE_resources />
+  <ExifTool_file_metadata FileType="PDF" FileTypeExtension="pdf" MIMEType="application/pdf" PDFVersion="1.6" Linearized="No" HasXFA="No" XMPToolkit="Adobe XMP Core 4.0-c316 44.253921, Sun Oct 01 2006 17:14:39" ModifyDate="2009.10.03 11:37:46" CreateDate="2008.05.13 19:03:02" MetadataDate="2009.10.03 11:37:46" Format="application/pdf" Title="Developer Resources for Java Technology" DocumentID="uuid:b97b984b-f7d7-4a16-be38-b3b79f445622" InstanceID="uuid:e397e890-bc17-4438-989c-cde8ff4bd55d" Producer="Acrobat Web Capture 8.0" PageMode="UseOutlines" PageCount="3" />
+  <PDFInfo EmbeddedFile="0" ObjStm="0" Page="3" trailer="3" endstream="106" JS="0" JavaScript="0" xref="3" AA="0" XFA="0" obj="407" AcroForm="1" JBIG2Decode="0" endobj="407" RichMedia="0" Launch="0" OpenAction="0" startxref="3" stream="106" Encrypt="0" Colors224="0" URI="246" />
+</Raport>

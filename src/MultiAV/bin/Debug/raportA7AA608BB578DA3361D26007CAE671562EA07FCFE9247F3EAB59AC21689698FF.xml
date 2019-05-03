@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Wielkosc_pliku="46016" Sha256="A7AA608BB578DA3361D26007CAE671562EA07FCFE9247F3EAB59AC21689698FF" Date="03.05.2019 02:04:49" Nazwa_pliku="pdf_digital_signature_timestamp.pdf">
+  <Antywirusy>
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
+    <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="C66450666C64280D7F51E952D9504360" SHA1="B798C3382A9A5AB44F4B30BF706A6D4EA97E81EB" Authentihash="A7AA608BB578DA3361D26007CAE671562EA07FCFE9247F3EAB59AC21689698FF" FileType="application/pdf" />
+  <FileVersionInfo>
+    <Podpis_Cyfrowy IsSigned="False" />
+    <File_Ver_Info FileBuildPart="0" />
+  </FileVersionInfo>
+  <PE_Header />
+  <PE_Sections />
+  <PE_Imports />
+  <Number_of_PE_resources_by_type />
+  <Number_of_PE_resources_by_language />
+  <PE_resources />
+  <ExifTool_file_metadata FileType="PDF" FileTypeExtension="pdf" MIMEType="application/pdf" PDFVersion="1.4" Linearized="No" HasXFA="No" PageCount="1" Creator="Tecxoft" Producer="TIPS; modified using TIPS" Title="PDF Digital Signatures" Keywords="PDF Signing, Digital Signatures, Tecxoft PDF digital signatures, www.tecxoft.com" Subject="PDF Digital Signatures" ModifyDate="2018.09.01 12:57:33" Author="Tecxoft" CreateDate="2014.06.29 18:29:51" />
+  <PDFInfo EmbeddedFile="0" ObjStm="0" Page="2" trailer="2" endstream="10" JS="0" JavaScript="0" xref="2" AA="0" XFA="0" obj="32" AcroForm="1" JBIG2Decode="0" endobj="32" RichMedia="0" Launch="0" OpenAction="0" startxref="2" stream="10" Encrypt="0" Colors224="0" URI="2" />
+</Raport>

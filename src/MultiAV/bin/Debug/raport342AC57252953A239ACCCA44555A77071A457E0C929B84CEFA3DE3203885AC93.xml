@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Raport Wielkosc_pliku="9113600" Sha256="342AC57252953A239ACCCA44555A77071A457E0C929B84CEFA3DE3203885AC93" Date="30.04.2019 10:09:15" Nazwa_pliku="MicrosoftSpeechPlatformSDK.msi">
+<Raport Wielkosc_pliku="9113600" Sha256="342AC57252953A239ACCCA44555A77071A457E0C929B84CEFA3DE3203885AC93" Date="30.04.2019 20:23:41" Nazwa_pliku="MicrosoftSpeechPlatformSDK.msi">
   <Antywirusy>
     <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
     <Antywirus Result="NoThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />

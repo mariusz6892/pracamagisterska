@@ -33,6 +33,8 @@ public class XMLParser
     private XmlNode basicPropertiesNode;
     private XmlNode oleNode;
     private XmlNode summaryoleNode;
+    private XmlNode docSummaryoleNode;
+    private XmlNode pdfNode;
 
 
     public XMLParser(string filename, long size, string sha256)
@@ -581,6 +583,132 @@ public class XMLParser
         summaryoleNode.Attributes.Append(AttName);
     }
 
+    public void InitializeDocOle()
+    {
+        docSummaryoleNode = _doc.CreateElement("DocumentSummaryInformation");
+        oleNode.AppendChild(docSummaryoleNode);
+    }
+
+    public void AddDocSummInfoAtt(uint PropertyIdentifier, string PropertyValue)
+    {
+        string PropertyName;
+        PropertyValue = PropertyValue.Replace("\0", String.Empty);
+        switch (PropertyIdentifier)
+        {
+            case 1:
+                PropertyName = "CodePage";
+                break;
+            case 2:
+                PropertyName = "Category";
+                break;
+            case 3:
+                PropertyName = "Presformat";
+                break;
+            case 4:
+                PropertyName = "ByteCount";
+                break;
+            case 5:
+                PropertyName = "LineCount";
+                break;
+            case 6:
+                PropertyName = "ParagraphsCount";
+                break;
+            case 7:
+                PropertyName = "SlideCount";
+                break;
+            case 8:
+                PropertyName = "NoteCount";
+                break;
+            case 9:
+                PropertyName = "HiddenCount";
+                break;
+            case 10:
+                PropertyName = "MultimediaClipsCount";
+                break;
+            case 11:
+                PropertyName = "Scale";
+                break;
+            case 12:
+                PropertyName = null;
+                break;
+            case 13:
+                PropertyName = null;
+                break;
+            case 14:
+                PropertyName = "Manager";
+                break;
+            case 15:
+                PropertyName = "Company";
+                break;
+            case 16:
+                PropertyName = "LinksDirty";
+                break;
+            case 17:
+                PropertyName = "CharactersWithSpaces";
+                break;
+            case 18:
+                PropertyName = "SharedDoc";
+                break;
+            case 19:
+                PropertyName = "LinkBase";
+                break;
+            case 20:
+                PropertyName = "HyperLinks";
+                break;
+            case 21:
+                PropertyName = "HyperLinksChanged";
+                break;
+            case 22:
+                PropertyName = "Version";
+                break;
+            case 23:
+                PropertyName = "DigitalSignature";
+                break;
+            case 24:
+                PropertyName = "ContentType";
+                break;
+            case 25:
+                PropertyName = "ContentStatus";
+                break;
+            case 26:
+                PropertyName = "Language";
+                break;
+            case 27:
+                PropertyName = "DocVersion";
+                break;
+            default:
+                PropertyName = "Unknown";
+                break;
+        }
+        try
+        {
+            XmlAttribute AttName = _doc.CreateAttribute(PropertyName);
+            AttName.Value = PropertyValue;
+            docSummaryoleNode.Attributes.Append(AttName);
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+
+    #endregion
+
+    #region PDFInfo
+    public void InitializePDFInfo()
+    {
+        pdfNode = _doc.CreateElement("PDFInfo");
+        raportNode.AppendChild(pdfNode);
+    }
+
+    public void AddPDFInfoAtt(string Name, string PropertyValue)
+    {
+        PropertyValue = PropertyValue.Replace("\0", String.Empty);
+        Name = new Regex("[^a-zA-Z0-9]").Replace(Name, string.Empty);
+        XmlAttribute AttName = _doc.CreateAttribute(Name);
+        AttName.Value = PropertyValue;
+        pdfNode.Attributes.Append(AttName);
+    }
     #endregion
 
     #region EXIF methods

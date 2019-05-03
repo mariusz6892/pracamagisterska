@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Raport Wielkosc_pliku="10381" Sha256="86A96EC03BA8242C1486456D67EE17F919128754846DBB3BDF5E836059091DBA" Date="03.05.2019 02:02:01" Nazwa_pliku="eicardropper.pdf">
+  <Antywirusy>
+    <Antywirus Nazwa_szkodnika="Trojan:O97M/EICAR_Test_File" Result="ThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender" />
+    <Antywirus Nazwa_szkodnika="Trojan:O97M/EICAR_Test_File" Result="ThreatFound" AVVersion="4.13.17134.619 (WinBuild.160101.0800)" Nazwa_AV="Windows Defender2" />
+  </Antywirusy>
+  <Podstawowe_Wlasciwosci MD5="A1DDC9EBE19A3D43EC25889085AD3ED8" SHA1="0FA681A24DF1B6EE6960BF1098AF9689CFB8A576" Authentihash="86A96EC03BA8242C1486456D67EE17F919128754846DBB3BDF5E836059091DBA" FileType="application/pdf" />
+  <FileVersionInfo>
+    <Podpis_Cyfrowy IsSigned="False" />
+    <File_Ver_Info FileBuildPart="0" />
+  </FileVersionInfo>
+  <PE_Header />
+  <PE_Sections />
+  <PE_Imports />
+  <Number_of_PE_resources_by_type />
+  <Number_of_PE_resources_by_language />
+  <PE_resources />
+  <ExifTool_file_metadata FileType="PDF" FileTypeExtension="pdf" MIMEType="application/pdf" PDFVersion="1.1" Linearized="No" PageCount="1" />
+  <PDFInfo EmbeddedFile="1" ObjStm="0" Page="1" trailer="1" endstream="2" JS="1" JavaScript="1" xref="1" AA="0" XFA="0" obj="9" AcroForm="0" JBIG2Decode="0" endobj="9" RichMedia="0" Launch="0" OpenAction="1" startxref="1" stream="2" Encrypt="0" Colors224="0" URI="0" />
+</Raport>

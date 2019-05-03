@@ -43,8 +43,9 @@ class Program
         //var fileToScan = @"C:\Users\MarWin\Downloads\Hdk-i-nagrodowy.docx";
         //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\PEReader.dll";
         //var fileToScan = @"D:\TS\createfileassoc.exe";
-        //var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\eicardropper.pdf";
-        var fileToScan = @"C:\Users\MarWin\Pictures\10a.jpg";
+        var fileToScan = @"C:\Users\MarWin\Desktop\Praca magisterska\eicardropper.pdf";
+        //var fileToScan = @"C:\Users\MarWin\Pictures\10a.jpg";
+        
 
         if (!File.Exists(fileToScan))
         {
@@ -72,7 +73,11 @@ class Program
         //FileVersionInfo
         FileversionInfo fileversioninfo = new FileversionInfo(fileToScan, ref raport);
 
-        if (StgIsStorageFile(fileToScan) == 0) // jezeli jest OLE
+        if (Path.GetExtension(fileToScan) == ".pdf") //jezeli jest PDF
+        {
+            PDFInfo pdfinfo = new PDFInfo(fileToScan, ref raport);
+        }
+        else if (StgIsStorageFile(fileToScan) == 0) // jezeli jest OLE
         {
             OLECompoundFileInfo ole = new OLECompoundFileInfo(fileToScan, ref raport);
         }
